@@ -1,20 +1,25 @@
 import { useState } from 'react';
-import Nav from '../components/Nav'
+import Nav from '@/components/Nav'
+import Home from '@/components/Home';
+import About from '@/components/About'
+import Projects from '@/components/Projects'
+import Contact from '@/components/Contact'
 
-const Home = () => {
-    const [sidebarOpen, setSideBarOpen] = useState(false);
-    const handleViewSidebar = () => {
-      setSideBarOpen(!sidebarOpen);
-    };
-    return (
-      <div>
-        <Nav onClick={handleViewSidebar} isOpen={sidebarOpen}/>
-        <div className="home">
-          <h1>Hi, I'm Kristina.</h1>
-        </div>
-      </div>
-    )
-  }
-  
-  export default Home
+const App = () => {
+  const [sidebarOpen, setSideBarOpen] = useState(false);
+  const handleViewSidebar = () => {
+    setSideBarOpen(!sidebarOpen);
+  };
+  return (
+    <div>
+      <Nav onClick={handleViewSidebar} isOpen={sidebarOpen}/>
+      <Home />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
+  )
+}
+
+export default App
   

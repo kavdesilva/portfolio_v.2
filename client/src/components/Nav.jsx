@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Nav = (props) => {
     const sidebarClass = props.isOpen ? "sidebar open" : "sidebar";
     return (
@@ -6,10 +8,10 @@ const Nav = (props) => {
                 <button onClick={props.onClick}>nav</button>
             </div>
             <div className={sidebarClass}>
-                <div>Home</div>
-                <div>About</div>
-                <div>Portfolio</div>
-                <div>Contact</div>
+                <div><Link href='/'>Home</Link></div>
+                <div><Link href='#about'>About</Link></div>
+                <div><Link href='#projects'>Projects</Link></div>
+                <div><Link href='#contact'>Contact</Link></div>
             </div>
         </div>
     )

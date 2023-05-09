@@ -2,9 +2,10 @@
     margin: 0 auto;
 }
 
-.home {
+#home, #about, #projects, #contact {
     color: brown;
     padding-top: 60px;
+    min-height: 100vh;
 }
 
 .header {
