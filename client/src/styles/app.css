@@ -1,3 +1,48 @@
+* {
+    margin: 0 auto;
+}
+
 .home {
     color: brown;
+    padding-top: 60px;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: lightcoral;
+}
+.header button {
+    position: fixed;
+    right: 0;
+    margin: 15px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    right: -15vw;
+    height: 100%;
+    width: 15vw;
+    transition: right 0.3s ease-in-out;
+    background-color: lightgray;
+}
+
+.content {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    background-color: lightgray;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.content.open {
+    right: 15vw;
 }
