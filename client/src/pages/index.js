@@ -13,7 +13,7 @@ const App = () => {
   
   return (
     <div>
-      <Nav onClick={handleViewSidebar} isOpen={sidebarOpen}/>
+      <Nav handleViewSidebar={handleViewSidebar} isOpen={sidebarOpen}/>
       <Home />
       <About />
       <Projects />

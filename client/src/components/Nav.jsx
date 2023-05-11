@@ -9,10 +9,10 @@ const Nav = ({ isOpen, handleViewSidebar}) => {
                 <button className="btn-nav" onClick={handleViewSidebar}>nav</button>
             </div>
             <div className={sidebarClass}>
-                <div><Link href='/'>Home</Link></div>
-                <div><Link href='#about'>About</Link></div>
-                <div><Link href='#projects'>Projects</Link></div>
-                <div><Link href='#contact'>Contact</Link></div>
+                <div onClick={handleViewSidebar}><Link href='/'>Home</Link></div>
+                <div onClick={handleViewSidebar}><Link href='#about'>About</Link></div>
+                <div onClick={handleViewSidebar}><Link href='#projects'>Projects</Link></div>
+                <div onClick={handleViewSidebar}><Link href='#contact'>Contact</Link></div>
             </div>
         </div>
     )
