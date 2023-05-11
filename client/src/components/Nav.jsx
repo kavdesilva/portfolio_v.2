@@ -5,7 +5,8 @@ const Nav = (props) => {
     return (
         <div className="nav">
             <div className="header">
-                <button onClick={props.onClick}>nav</button>
+                <h3 className="logo">KVD</h3>
+                <button className="btn-nav" onClick={props.onClick}>nav</button>
             </div>
             <div className={sidebarClass}>
                 <div><Link href='/'>Home</Link></div>

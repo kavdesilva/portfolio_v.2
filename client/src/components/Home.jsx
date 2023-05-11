@@ -5,7 +5,7 @@ const Home = () => {
     return (
     <div id="home">
         <h1>Hi, I'm Kristina.</h1>
-        <button onClick={() => router.push('/#projects')}>Projects</button>
+        <button className="btn-primary" onClick={() => router.push('/#projects')}>Projects</button>
     </div>
     )
 }
