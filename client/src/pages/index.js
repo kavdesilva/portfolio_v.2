@@ -10,6 +10,7 @@ const App = () => {
   const handleViewSidebar = () => {
     setSideBarOpen(!sidebarOpen);
   };
+  
   return (
     <div>
       <Nav onClick={handleViewSidebar} isOpen={sidebarOpen}/>
