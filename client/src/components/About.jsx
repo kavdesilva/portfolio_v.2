@@ -24,7 +24,7 @@ const About = () => {
                     <h3>My Skills</h3>
                     {
                         skills.map((skill, i) => (
-                            <button className="btn-skill" key={i}>{skill}</button>
+                            <button className="btn-skill" key={i}><p className="gradient-text">{skill}</p></button>
                         ))
                     }
                 </div>
