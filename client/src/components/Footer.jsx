@@ -3,10 +3,9 @@ import Link from "next/link"
 const Footer = () => {
     return (
         <div className="footer">
-            <h2>Kristina Van-Bergen DeSilva</h2>
             <div className="footer-nav">
                 <nav>
-                    <p>Sitemap</p>
+                    <h2>Sitemap</h2>
                     <ul>
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='#about'>About</Link></li>
@@ -15,11 +14,11 @@ const Footer = () => {
                     </ul>
                 </nav>
                 <div className="footer-icons">
-                    <p>Socials</p>
-                    <p>icons go here.</p>
+                    <h2>Socials</h2>
+                    <p className="gradient-text">icons go here.</p>
                 </div>
             </div>
-            <p className="copyright">&copy; Copyright 2023. Made by Kristina Van-Bergen DeSilva</p>
+            <p className="copyright">&copy; Copyright 2023. Built by Kristina Van-Bergen DeSilva. Inspired by <Link href="https://www.rammaheshwari.com">Ram Maheshwari.</Link></p>
         </div>
     )
 }
