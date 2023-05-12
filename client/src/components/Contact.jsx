@@ -4,7 +4,7 @@ const Contact = () => {
             <h1>Contact Me</h1>
             <div className="form-container">
                 <div className="blurb">
-                    <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
+                    <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible.</p>
                 </div>
                 <form id="contact-form" 
                     name="simple-contact-form" 

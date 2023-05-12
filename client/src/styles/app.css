@@ -43,6 +43,9 @@ button:hover {
     height: 56.14px;
 }
 
+a {
+    text-decoration: none;
+}
 
 /* <------- header/nav -------> */
 
@@ -73,7 +76,7 @@ button:hover {
     height: 100%;
     width: 15vw;
     transition: right 0.3s ease-in-out;
-    background-color: lightgray;
+    background-color: rgb(211, 211, 211, 0.5);
 }
 
 .sidebar.open {
@@ -84,6 +87,14 @@ nav ul {
     list-style-type: none;
     padding-right: 1rem;
     text-align: right;
+}
+
+nav a {
+    color: rgb(0, 0, 0, 0.5);
+}
+
+nav a:hover {
+    color: #000000;
 }
 
 /* <------- home -------> */
@@ -101,6 +112,20 @@ nav ul {
 
 .story {
     text-align: left;
+}
+
+.skills {
+    text-align: left;
+}
+
+.skill {
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    padding: 9.4px 20.61px 11.33px 20.8px;
+    background: rgba(153, 153, 153, 0.2);
+    color: #000000;
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.13);
 }
 
 /* <------- projects -------> */
