@@ -23,7 +23,7 @@ const About = () => {
                     <h3>My Skills</h3>
                     {
                         skills.map((skill) => (
-                            <button className="skill">{skill}</button>
+                            <button className="btn-skill">{skill}</button>
                         ))
                     }
                 </div>

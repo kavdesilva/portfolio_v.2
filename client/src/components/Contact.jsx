@@ -31,7 +31,7 @@ const Contact = () => {
                                     placeholder=" " 
                                     required={true}></textarea>
                     </fieldset>
-                    <button type="submit" className="btn-primary">submit</button>
+                    <button type="submit" className="btn-primary">Submit</button>
                 </form>
             </div>
         </div>

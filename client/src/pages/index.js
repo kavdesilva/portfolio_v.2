@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <Nav handleViewSidebar={handleViewSidebar} isOpen={sidebarOpen}/>
-      <div onClick={() => setSideBarOpen(false)}>
+      <div className='main' onClick={() => setSideBarOpen(false)}>
           <Home />
           <About />
           <Projects />
