@@ -15,11 +15,13 @@ const App = () => {
   return (
     <div>
       <Nav handleViewSidebar={handleViewSidebar} isOpen={sidebarOpen}/>
-      <Home />
-      <About />
-      <Projects />
-      <Contact />
-      <Footer />
+      <div onClick={() => setSideBarOpen(false)}>
+          <Home />
+          <About />
+          <Projects />
+          <Contact />
+          <Footer />
+      </div>
     </div>
   )
 }
