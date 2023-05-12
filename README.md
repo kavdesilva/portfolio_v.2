@@ -6,3 +6,5 @@ Sources:
 #### [Link Hover Effect](https://css-tricks.com/css-link-hover-effects/)
 
 #### [Button Hover Effect](https://css-tricks.com/almanac/properties/t/transition/)
+
+### [Gradient Text](https://bootcamp.uxdesign.cc/gradient-text-in-css-609068d3f953)
