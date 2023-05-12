@@ -5,7 +5,7 @@ const Nav = ({ isOpen, handleViewSidebar}) => {
     const router = useRouter()
     const sidebarClass = isOpen ? "sidebar open" : "sidebar";
     return (
-        <div className="nav">
+        <div className="main-nav">
             <div className="header">
                 <button className="logo" onClick={() => router.push('/')}>KVD</button>
                 <button className="btn-nav" onClick={handleViewSidebar}>nav</button>

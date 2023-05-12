@@ -1,12 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
 /* <------- global -------> */
 
 html {
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: large;
     scroll-behavior: smooth!important;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+h1, h2 {
+    text-transform: uppercase;
 }
 
 body {
     margin: 0 auto;
+}
+
+.divider {
+    margin: 0 auto;
+    width: 30px;
+    height: 5px;
+    background:
+    linear-gradient(
+    to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
 }
 
 button {
@@ -17,6 +50,7 @@ button {
     border-radius: 5px;
     color: white;
     margin: 0 auto;
+    font-size: .9em;
 }
 
 button:hover {
@@ -34,7 +68,7 @@ button:hover {
     text-align: center;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 336px;
+    padding: 0px 300px;
 }
 
 .btn-primary {
@@ -66,7 +100,7 @@ a {
 .header {
     position: fixed;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     background-color: white;
     box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.2);
 }
@@ -74,18 +108,23 @@ a {
 .logo {
     display: inline-block;
     position: fixed;
-    margin: 1em;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: .5rem 1rem;
 }
 
 .btn-nav {
     position: fixed;
     right: 0;
-    margin: 1em;
-}
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin: .5rem 1rem;}
 
 .sidebar {
     position: fixed;
-    top: 3rem;
+    top: 4rem;
     right: -15vw;
     height: 100%;
     width: 15vw;
@@ -97,17 +136,17 @@ a {
     right: 0;
 }
 
-nav ul {
+.main-nav ul {
     list-style-type: none;
     padding-right: 1rem;
     text-align: right;
 }
 
-nav li {
+.main-nav li {
     margin: 7px;
 }
 
-nav a {
+.main-nav a {
     color: rgb(0, 0, 0, 0.5);
     font-size: 1.5rem;
     background:
@@ -123,7 +162,8 @@ nav a {
     transition: background-size 400ms;
 }
 
-nav a:hover {
+.main-nav a:hover {
+    color: rgb(0, 0, 0);
     position: relative; 
     left: -7px;
     background-size: 100% 3px, 0 3px;
@@ -176,16 +216,100 @@ nav a:hover {
 
 /* <------- contact -------> */
 
-/* fieldset {
+.form-container input{
+    width: 99%;
+    height: 30px;
+    font-size: 1rem;
+    text-shadow: none;
+    background: #F0F0F0;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+}
+
+.form-container textarea{
+    width: 99%;
+    height: 200px;
+    font-size: 1rem;
+    text-shadow: none;
+    background: #F0F0F0;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+}
+
+fieldset {
     border: none;
-} */
+    text-align: left;
+}
+
+#contact-form {
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
+    border-radius: 5px;
+    padding-bottom: 30px;
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
 
 /* <------- footer -------> */
 
 .footer {
-    position: absolute;
+    display: inline-block;
     width: 100%;
     height: 300px;
     background: #000000;
     color: white;
+}
+
+.footer-nav {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.footer-nav nav, .footer-icons {
+    padding: 0 150px 50px 150px;
+}
+
+.footer-nav ul {
+    display: flex;
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-nav a {
+    color: white;
+    margin-right: 15px;
+    padding-bottom: 5px;
+    background:
+    linear-gradient(
+    to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+        );
+    background-size: 0 3px, 100% 3px;
+    background-position: 0 100%, 100% 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+}
+
+.footer-nav a:hover {
+    position: relative; 
+    background-size: 100% 3px, 0 3px;
+}
+
+.footer h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    padding-left: 150px;
+}
+
+.footer-icons {
+    text-align: right;
+}
+
+.copyright {
+    text-align: center;
+    font-size: .8rem;
+    width: 100%;
 }

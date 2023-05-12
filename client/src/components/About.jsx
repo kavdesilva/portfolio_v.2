@@ -7,7 +7,8 @@ const About = () => {
 
     return (
         <div id="about">
-            <h1>About Me</h1>
+            <h2>About Me</h2>
+            <div className="divider"></div>
             <div className="blurb">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde dignissimos eveniet, dolores, maxime culpa ea veritatis, nulla omnis voluptates cupiditate voluptatem! Ducimus, modi! Vitae commodi iure aperiam minus tenetur, consequuntur magnam dolor architecto corrupti facere cumque perspiciatis eius nemo sint? Eveniet beatae eligendi quis culpa praesentium fuga nam aut inventore.</p>
             </div>
@@ -22,8 +23,8 @@ const About = () => {
                 <div className="skills">
                     <h3>My Skills</h3>
                     {
-                        skills.map((skill) => (
-                            <button className="btn-skill">{skill}</button>
+                        skills.map((skill, i) => (
+                            <button className="btn-skill" key={i}>{skill}</button>
                         ))
                     }
                 </div>
