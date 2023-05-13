@@ -20,7 +20,7 @@ const Projects = ({targetRefs}) => {
     return (
         <div id="projects">
             <h2>Projects</h2>
-            <div className="divider" ref={targetRefs.current[1]}></div>
+            <div className="divider" ref={(el) => (targetRefs.current[1] = el)}></div>
             <div className="skills">
                 <h3>My Skills</h3>
                 {
