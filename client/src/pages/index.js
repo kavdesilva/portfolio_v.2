@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, createRef, useEffect } from 'react';
 import Nav from '@/components/Nav'
 import Home from '@/components/Home';
 import About from '@/components/About'
@@ -12,30 +12,32 @@ const App = () => {
     setSideBarOpen(!sidebarOpen);
   };
 
-  const dividers = document.querySelectorAll('.divider');
+  const targetRefs = useRef(Array(3).fill(null).map(() => createRef()));
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate');
-      } else {
-        entry.target.classList.remove('animate');
-      }
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.toggle("animate", entry.isIntersecting);
+      });
+    }, { threshold: 0.5 });
+  
+    targetRefs.current.forEach((target) => {
+      observer.observe(target);
     });
-  });
-
-  dividers.forEach(divider => {
-    observer.observe(divider);
-  });
+  
+    return () => {
+      observer.disconnect();
+    };
+  }, [targetRefs]);
   
   return (
     <div>
       <Nav handleViewSidebar={handleViewSidebar} isOpen={sidebarOpen}/>
       <div className='main' onClick={() => setSideBarOpen(false)}>
           <Home />
-          <About />
-          <Projects />
-          <Contact />
+          <About targetRefs={targetRefs}/>
+          <Projects targetRefs={targetRefs}/>
+          <Contact targetRefs={targetRefs}/>
           <Footer />
       </div>
     </div>

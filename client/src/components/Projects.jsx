@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const Projects = () => {
+const Projects = ({targetRefs}) => {
     const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'NextJS', 'Vue', 'GIT', 'GitHub', 'SQL', 'Express', 'MongoDB', 'Python', 'Django']
 
     const [skillSelected, setButtonClass] = useState([])
@@ -20,7 +20,7 @@ const Projects = () => {
     return (
         <div id="projects">
             <h2>Projects</h2>
-            <div className="divider"></div>
+            <div className="divider" ref={(el) => (targetRefs.current[1] = el)}></div>
             <div className="skills">
                 <h3>My Skills</h3>
                 {

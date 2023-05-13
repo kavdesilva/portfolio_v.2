@@ -1,8 +1,8 @@
-const Contact = () => {
+const Contact = ({targetRefs}) => {
     return (
         <div id="contact">
             <h2>Contact</h2>
-            <div className="divider"></div>
+            <div className="divider" ref={(el) => (targetRefs.current[2] = el)}></div>
             <div className="form-container">
                 <div className="blurb">
                     <p>Feel free to contact me by submitting the form below and I will get back to you as soon as possible.</p>
