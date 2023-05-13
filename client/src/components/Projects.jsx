@@ -16,7 +16,7 @@ const Projects = ({targetRefs}) => {
     const [projectsArray, setProjectsArray] = useState(null)
     const [selectedProjects, setSelectedProjects] = useState([])
 
-    const dummyImgUrl = 'https://d33wubrfki0l68.cloudfront.net/19c708670a1f21231c1e2efa6ba38dbf52b15343/3237e/assets/jpeg/dopefolio.jpeg'
+    const dummyImgUrl = 'https://thumbnails.production.thenounproject.com/EMHMPjlrTtkt-Va_M_YEdSyCJ_Y=/fit-in/1000x1000/photos.production.thenounproject.com/photos/8F5F7243-F55C-494E-B938-B545722D0F14.jpg'
 
     useEffect(() => {
         fetch('/api/projects')
@@ -62,7 +62,7 @@ const Projects = ({targetRefs}) => {
                                 <p>{project.title}</p>
                                 <p>{project.description}</p>
                                 <ul>
-                                    {project.tags.map((tag) => {return <li>{tag}</li>})}
+                                    {project.tags.map((tag) => {return <li className={skillSelected.includes(tag) ? "gradient-tag" : "tag"}>{tag}</li>})}
                                 </ul>
                             </div>
                         </div>

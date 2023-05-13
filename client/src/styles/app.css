@@ -307,6 +307,7 @@ a {
 
 .project-info {
     margin: auto 0;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
 }
 
 .project-info ul {
@@ -318,6 +319,19 @@ a {
 
 .project-info li {
     padding-right: 10px;
+}
+
+.gradient-tag {
+    background-image:
+        linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* <------- contact -------> */
