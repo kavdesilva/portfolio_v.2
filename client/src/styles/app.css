@@ -197,17 +197,18 @@ a {
             rgba(255, 0, 180, 1),
             rgba(0, 100, 200, 1)
         );
-    background-size: 0 3px, 100% 3px;
+    background-size: 0 4px, 100% 4px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 400ms;
+    padding-bottom: 5px;
 }
 
 .main-nav a:hover {
     color: rgb(0, 0, 0);
     /* position: relative; 
     left: -7px; */
-    background-size: 100% 3px, 0 3px;
+    background-size: 100% 4px, 0 4px;
 }
 
 /* <------- home -------> */
@@ -331,7 +332,7 @@ fieldset {
 .footer a {
     color: white;
     margin-right: 15px;
-    padding-bottom: 5px;
+    padding-bottom: 7px;
     background:
     linear-gradient(
     to right,
