@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const Projects = () => {
-    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Vue', 'GIT', 'GitHub', 'SQL', 'Express', 'MongoDB', 'Python', 'Django']
+    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'NextJS', 'Vue', 'GIT', 'GitHub', 'SQL', 'Express', 'MongoDB', 'Python', 'Django']
 
     const [skillSelected, setButtonClass] = useState([])
 
