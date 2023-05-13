@@ -12,7 +12,7 @@ const Nav = ({ isOpen, handleViewSidebar}) => {
             </div>
             <nav className={sidebarClass}>
                 <ul>
-                    <li onClick={handleViewSidebar}><Link href='/'>Home</Link></li>
+                    {/* <li onClick={handleViewSidebar}><Link href='/'>Home</Link></li> */}
                     <li onClick={handleViewSidebar}><Link href='#about'>About</Link></li>
                     <li onClick={handleViewSidebar}><Link href='#projects'>Projects</Link></li>
                     <li onClick={handleViewSidebar}><Link href='#contact'>Contact</Link></li>
