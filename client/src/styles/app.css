@@ -294,6 +294,22 @@ a {
     font-weight: 500;
 }
 
+.btn-selected:hover {
+    background:
+    linear-gradient(
+        120deg,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+        );
+    color: white;
+    font-weight: 500;
+}
+
+.btn-selected p:hover {
+    color: white;
+}
+
 .project-card {
     display: grid;
     grid-template-columns: 60% 40%;
