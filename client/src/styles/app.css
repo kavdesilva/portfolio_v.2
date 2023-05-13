@@ -204,8 +204,8 @@ a {
 
 .main-nav a:hover {
     color: rgb(0, 0, 0);
-    position: relative; 
-    left: -7px;
+    /* position: relative; 
+    left: -7px; */
     background-size: 100% 3px, 0 3px;
 }
 
