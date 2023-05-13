@@ -41,6 +41,25 @@ body {
             rgba(255, 0, 180, 1),
             rgba(0, 100, 200, 1)
         );
+    animation-name: widthGrow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.divider.animate {
+    animation-name: scrollAnimation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+  }
+
+@keyframes scrollAnimation {
+    from {
+        width: 30px;
+    }
+    to {
+        width: 500px;
+    }
 }
 
 button {
