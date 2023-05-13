@@ -259,10 +259,10 @@ a {
     background:
     linear-gradient(
         120deg,
-        hsl(0, 100%, 60%),
-        hsl(318, 100%, 60%),
-        hsl(210, 100%, 40%)
-    );
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+        );
     color: white;
     font-weight: 500;
 }
