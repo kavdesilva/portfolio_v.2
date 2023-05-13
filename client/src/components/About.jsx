@@ -5,7 +5,7 @@ const About = ({targetRefs}) => {
     return (
         <div id="about">
             <h2>About Me</h2>
-            <div className="divider" ref={(el) => (targetRefs.current[0] = el)}></div>
+            <div className="divider" ref={(el) => (targetRefs.current[1] = el)}></div>
             <div className="story">
                 <h3>My Story</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo perferendis quae dolore tempora modi quidem qui voluptas sunt error minus amet illum adipisci sit quo eligendi, quisquam repudiandae, pariatur facilis!</p>
