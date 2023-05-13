@@ -45,11 +45,11 @@ const Projects = ({targetRefs}) => {
                 <h3>My Skills</h3>
                 {
                     skills.map((skill, i) => (
-                        <button key={i} className={skillSelected.includes(skill) ? "btn-skill btn-selected" : "btn-skill"} onClick={() => handleButtonClass(skill)}><p className="gradient-text">{skill}</p></button>
+                        <button key={i} className={skillSelected.includes(skill) ? "btn-skill btn-selected" : "btn-skill"} onClick={() => handleButtonClass(skill)}><p className={skillSelected.includes(skill) ? "gradient-text" : ""}>{skill}</p></button>
                     ))
                 }
                 <br />
-                <button className="btn-skill" onClick={() => setButtonClass([])}><p className="gradient-text">Clear</p></button>
+                <button className="btn-skill" onClick={() => setButtonClass([])}><p>Clear</p></button>
             </div>
             <div className="projects-container">
                 {
@@ -62,7 +62,7 @@ const Projects = ({targetRefs}) => {
                                 <p>{project.title}</p>
                                 <p>{project.description}</p>
                                 <ul>
-                                    {project.tags.map((tag) => {return <li className={skillSelected.includes(tag) ? "gradient-tag" : "tag"}>{tag}</li>})}
+                                    {project.tags.map((tag) => {return <li className={skillSelected.includes(tag) ? "gradient-text" : ""}>{tag}</li>})}
                                 </ul>
                             </div>
                         </div>

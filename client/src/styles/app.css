@@ -127,7 +127,7 @@ a {
     text-decoration: none;
 }
 
-.gradient-text:hover {
+.gradient-text {
     background-image:
         linear-gradient(
         to right,
@@ -136,7 +136,8 @@ a {
         rgba(0, 100, 200, 1)
     );
     background-clip: text;
-    color: transparent
+    color: transparent;
+    font-weight: 500;
 }
 
 /* <------- header/nav -------> */
@@ -269,20 +270,6 @@ a {
 }
 
 .btn-skill:hover {
-    background: rgba(153, 153, 153, 0.2);
-    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.18);
-    position: relative;
-    top: -3px;
-    right: -2px;
-    font-weight: 500;
-}
-
-.btn-skill p {
-    padding: 10px 15px;
-    margin: 0;
-}
-
-.btn-selected {
     background:
     linear-gradient(
         120deg,
@@ -290,8 +277,25 @@ a {
         rgba(255, 0, 180, 1),
         rgba(0, 100, 200, 1)
         );
-    color: white;
+    color: white!important;
     font-weight: 500;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.18);
+    position: relative;
+    top: -3px;
+    right: -2px;
+}
+
+.btn-skill p {
+    padding: 10px 15px;
+    margin: 0;
+}
+
+.btn-skill p:hover {
+    color: white;
+}
+
+.btn-selected {
+    background: rgba(153, 153, 153, 0.2);
 }
 
 .project-card {
@@ -319,19 +323,6 @@ a {
 
 .project-info li {
     padding-right: 10px;
-}
-
-.gradient-tag {
-    background-image:
-        linear-gradient(
-        to right,
-        rgba(255, 0, 0, 1),
-        rgba(255, 0, 180, 1),
-        rgba(0, 100, 200, 1)
-    );
-    background-clip: text;
-    color: transparent;
-    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* <------- contact -------> */
