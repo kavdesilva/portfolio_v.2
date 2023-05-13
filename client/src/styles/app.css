@@ -121,7 +121,15 @@ a {
 
 /* <------- header/nav -------> */
 
-.header {
+/* .header {
+    position: fixed;
+    width: 100%;
+    height: 4rem;
+    background-color: white;
+    box-shadow: 0px 10px 200px rgba(0, 0, 0, 0.2);
+} */
+
+.main-nav {
     position: fixed;
     width: 100%;
     height: 4rem;
@@ -138,16 +146,20 @@ a {
     margin: .5rem 1rem;
 }
 
-.btn-nav {
+/* .btn-nav {
     position: fixed;
     right: 0;
     height: 3rem;
     width: 3rem;
     border-radius: 50%;
     margin: .5rem 1rem;
+} */
+
+.btn-nav {
+    display: none;
 }
 
-.sidebar {
+/* .sidebar {
     position: fixed;
     top: 4rem;
     right: -15vw;
@@ -159,12 +171,15 @@ a {
 
 .sidebar.open {
     right: 0;
-}
+} */
 
 .main-nav ul {
     list-style-type: none;
     padding-right: 1rem;
     text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
 }
 
 .main-nav li {
@@ -173,7 +188,7 @@ a {
 
 .main-nav a {
     color: rgb(0, 0, 0, 0.5);
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     background:
         linear-gradient(
             to right,
@@ -231,9 +246,10 @@ a {
 .btn-skill:hover {
     background: rgba(153, 153, 153, 0.2);
     box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.18);
-    position: relative;
+    /* position: relative;
     top: -3px;
-    right: -2px;
+    right: -2px; */
+    cursor: auto;
 }
 
 .btn-skill p {
