@@ -14,7 +14,7 @@ const App = () => {
     setSideBarOpen(!sidebarOpen);
   };
 
-  const targetRefs = useRef(Array(4).fill(null).map(() => createRef()));
+  const targetRefs = useRef(Array(5).fill(null).map(() => createRef()));
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -48,7 +48,7 @@ const App = () => {
           <Contact targetRefs={targetRefs}/>
         </div>
         <div className={devMode ? "dev-mode" : ""}>
-          <ComingSoon />
+          <ComingSoon targetRefs={targetRefs}/>
         </div>
       </div>
       <Footer devMode={devMode}/>
