@@ -1,9 +1,10 @@
 import Link from "next/link"
 
-const Footer = () => {
+const Footer = ({devMode}) => {
+    console.log(devMode)
     return (
         <div className="footer">
-            <div className="footer-nav">
+            <div className={!devMode ? "dev-mode" : "footer-nav"}>
                 <nav>
                     <h2>Sitemap</h2>
                     <ul>
@@ -18,7 +19,7 @@ const Footer = () => {
                     <p className="gradient-text">icons go here.</p>
                 </div>
             </div>
-            <p className="copyright">&copy; Copyright 2023. Built by Kristina Van-Bergen DeSilva. Inspired by <Link href="https://www.rammaheshwari.com">Ram Maheshwari.</Link></p>
+            <p className="copyright">&copy; Copyright 2023. Built by Kristina Van-Bergen DeSilva.</p>
         </div>
     )
 }

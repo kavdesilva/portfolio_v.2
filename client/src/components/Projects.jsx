@@ -62,7 +62,7 @@ const Projects = ({targetRefs}) => {
                                 <p>{project.title}</p>
                                 <p>{project.description}</p>
                                 <ul>
-                                    {project.tags.map((tag) => {return <li className={skillSelected.includes(tag) ? "gradient-tag" : "tag"}>{tag}</li>})}
+                                    {project.tags.map((tag, j) => {return <li className={skillSelected.includes(tag) ? "gradient-tag" : "tag"} key={j}>{tag}</li>})}
                                 </ul>
                             </div>
                         </div>

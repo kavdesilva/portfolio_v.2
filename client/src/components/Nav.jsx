@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Nav = ({ isOpen, handleViewSidebar}) => {
+const Nav = ({ isOpen, handleViewSidebar, devMode}) => {
     const router = useRouter()
     const sidebarClass = isOpen ? "sidebar open" : "sidebar";
     return (
@@ -10,7 +10,7 @@ const Nav = ({ isOpen, handleViewSidebar}) => {
                 <button className="logo" onClick={() => router.push('/')}>KVD</button>
                 <button className="btn-nav" onClick={handleViewSidebar}>nav</button>
             </div>
-            <nav className={sidebarClass}>
+            <nav className={!devMode ? "dev-mode" : {sidebarClass}}>
                 <ul>
                     {/* <li onClick={handleViewSidebar}><Link href='/'>Home</Link></li> */}
                     <li onClick={handleViewSidebar}><Link href='#about'>About</Link></li>

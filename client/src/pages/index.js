@@ -1,13 +1,15 @@
 import { useState, useRef, createRef, useEffect } from 'react';
 import Nav from '@/components/Nav'
-import Home from '@/components/Home';
+import Home from '@/components/Home'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
 import Contact from '@/components/Contact'
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer'
+import ComingSoon from '@/components/ComingSoon'
 
 const App = () => {
   const [sidebarOpen, setSideBarOpen] = useState(false);
+
   const handleViewSidebar = () => {
     setSideBarOpen(!sidebarOpen);
   };
@@ -29,17 +31,27 @@ const App = () => {
       observer.disconnect();
     };
   }, [targetRefs]);
+
+  const [devMode, setDevMode] = useState(false)
   
   return (
     <div>
-      <Nav handleViewSidebar={handleViewSidebar} isOpen={sidebarOpen}/>
+      <Nav handleViewSidebar={handleViewSidebar} 
+           isOpen={sidebarOpen}
+           devMode={devMode}
+        />
       <div className='main' onClick={() => setSideBarOpen(false)}>
+        <div className={!devMode ? "dev-mode" : ""}>
           <Home targetRefs={targetRefs}/>
           <About targetRefs={targetRefs}/>
           <Projects targetRefs={targetRefs}/>
           <Contact targetRefs={targetRefs}/>
-          <Footer />
+        </div>
+        <div className={devMode ? "dev-mode" : ""}>
+          <ComingSoon />
+        </div>
       </div>
+      <Footer devMode={devMode}/>
     </div>
   )
 }
