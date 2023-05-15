@@ -16,7 +16,7 @@ const Footer = ({devMode}) => {
                 </nav>
                 <div className="footer-icons">
                     <h2>Socials</h2>
-                    <p className="gradient-text">icons go here.</p>
+                    <p className="gradient-text" style={{cursor: 'pointer'}}>icons go here.</p>
                 </div>
             </div>
             <p className="copyright">&copy; Copyright 2023. Built by Kristina Van-Bergen DeSilva.</p>
