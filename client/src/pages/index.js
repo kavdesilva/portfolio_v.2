@@ -32,7 +32,7 @@ const App = () => {
     };
   }, [targetRefs]);
 
-  const [devMode, setDevMode] = useState(false)
+  const [devMode, setDevMode] = useState(true)
   
   return (
     <div>
