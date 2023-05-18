@@ -54,10 +54,8 @@ const Projects = ({targetRefs}) => {
             <div className="projects-container">
                 {
                     selectedProjects?.map((project, i) => (
-                        <div key={i} className="project-card">
-                            <div className="project-image">
-                                <img src={dummyImgUrl} alt={project.img_alt} />
-                            </div>
+                        <div key={i} className="project-card">    
+                            <img src={dummyImgUrl} alt={project.img_alt} />
                             <div className="project-info">
                                 <p>{project.title}</p>
                                 <p>{project.description}</p>
