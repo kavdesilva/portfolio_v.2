@@ -10,7 +10,7 @@ export default (req, res) => {
             tags: ['HTML', 'CSS', 'JavaScript']
         },
         {
-            title: `Children's Author Website Template`,
+            title: `Author Website Template`,
             url: '#',
             github_url: 'https://github.com/kavdesilva/author_website',
             img_src: '#',

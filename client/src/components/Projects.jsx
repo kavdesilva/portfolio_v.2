@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
 
-const Projects = ({targetRefs}) => {
+const Projects = ({targetRefs, projectsArray}) => {
+    const router = useRouter()
     const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'NextJS', 'Vue', 'GIT', 'GitHub', 'SQL', 'Express', 'MongoDB', 'Python', 'Django']
 
     const [skillSelected, setButtonClass] = useState([])
@@ -13,17 +15,9 @@ const Projects = ({targetRefs}) => {
         }
     }
 
-    const [projectsArray, setProjectsArray] = useState(null)
     const [selectedProjects, setSelectedProjects] = useState([])
 
     const dummyImgUrl = 'https://thumbnails.production.thenounproject.com/EMHMPjlrTtkt-Va_M_YEdSyCJ_Y=/fit-in/1000x1000/photos.production.thenounproject.com/photos/8F5F7243-F55C-494E-B938-B545722D0F14.jpg'
-
-    useEffect(() => {
-        fetch('/api/projects')
-            .then(res => res.json())
-            .then(data => setProjectsArray(data))
-            .catch(error => console.error(error))
-    }, [])
 
     useEffect(() => {
         if (!projectsArray) return;
@@ -36,6 +30,15 @@ const Projects = ({targetRefs}) => {
         setSelectedProjects(filteredProjects);
     }, [skillSelected, projectsArray]);
 
+    const [cardHover, setCardHover] = useState(null);
+
+    const handleHover = (index) => {
+      setCardHover(index);
+    };
+  
+    const handleLeave = () => {
+      setCardHover(null);
+    };
 
     return (
         <div id="projects">
@@ -54,14 +57,25 @@ const Projects = ({targetRefs}) => {
             <div className="projects-container">
                 {
                     selectedProjects?.map((project, i) => (
-                        <div key={i} className="project-card">    
+                        <div key={i} className="project-card" onMouseEnter={() => handleHover(i)} onMouseLeave={handleLeave}>    
                             <img src={dummyImgUrl} alt={project.img_alt} />
                             <div className="project-info">
-                                <p>{project.title}</p>
-                                <p>{project.description}</p>
+                                <h4>{project.title}</h4>
                                 <ul>
                                     {project.tags.map((tag, j) => {return <li className={skillSelected.includes(tag) ? "gradient-tag" : "tag"} key={j}>{tag}</li>})}
                                 </ul>
+                                <div className={`project-description ${cardHover === i ? 'expanded' : ''}`}>
+                                    <p>{project.description}</p>
+                                    <button className="btn-project-details" onClick={() => {
+                                        router.push({
+                                            pathname: '/projects/[title]',
+                                            query: { 
+                                              project: JSON.stringify(project)
+                                            },
+                                          }, `/projects/${project.title.toLowerCase().replace(/\s/g, "-")}`);
+                                      }}
+                                    >Read More</button>
+                                </div>
                             </div>
                         </div>
                     ))

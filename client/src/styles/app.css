@@ -27,7 +27,7 @@ h3 {
     font-size: 1.3rem;
 }
 
-h1, h2 {
+h1, h2, h4 {
     text-transform: uppercase;
 }
 
@@ -320,18 +320,17 @@ a {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
-    height: 50vh;
-    overflow-y: auto;
-    background-color: rgb(0, 0, 0, .2);
 }
 
 .project-card {
-    max-width: 500px;
+    max-width: 750px;
     min-width: 300px;
+    height: min-content;
     text-align: left;
-    margin: 25px;
+    margin: 33px;
     border-radius: 5px;
-    background-color: bisque;
+    background-color: rgb(0, 0, 0, .15);
+    box-shadow: 0px 7px 29px rgba(100, 100, 111, 0.2);
 }
 
 .project-card img {
@@ -358,10 +357,37 @@ a {
     flex-wrap: wrap;
     list-style-type: none;
     padding: 0;
+    margin-bottom: 15px;
 }
 
 .project-info li {
     padding-right: 10px;
+}
+
+.project-description {
+    max-height: 0;
+    transition: max-height 0.15s ease-out;
+    overflow: hidden;
+}
+
+.project-description.expanded {
+    max-height: 500px;
+    transition: max-height 0.15s ease-in;
+}
+
+.btn-project-details {
+    background-image:
+        linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+    );
+    background-clip: text;
+    color: transparent;
+    box-shadow: none;
+    font-weight: 500;
+    margin-top: 15px;
 }
 
 .gradient-tag {
@@ -376,6 +402,7 @@ a {
     color: transparent;
     text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* <------- contact -------> */
 
